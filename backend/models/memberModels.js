@@ -3,6 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const Member = require('../models/memberModels');
+
+// Multer storage setup
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/');
@@ -13,6 +15,8 @@ const storage = multer.diskStorage({
   }
 });
 const upload = multer({ storage });
+
+// Add a new member (POST /api/members)
 router.post('/', upload.single('image'), async (req, res) => {
   try {
     const {
@@ -42,6 +46,8 @@ router.post('/', upload.single('image'), async (req, res) => {
     res.status(500).json({ error: 'Failed to add member' });
   }
 });
+
+// Get member by ID (GET /api/members/:id)
 router.get('/:id', async (req, res) => {
   try {
     const member = await Member.findById(req.params.id);
@@ -49,6 +55,8 @@ router.get('/:id', async (req, res) => {
     if (!member) {
       return res.status(404).json({ message: 'Member not found' });
     }
+
+    // Send full image URL
     const imageUrl = member.image ? `/uploads/${member.image}` : null;
 
     res.status(200).json({
