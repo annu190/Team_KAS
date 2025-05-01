@@ -1,0 +1,39 @@
+.members-container {
+  padding: 20px;
+}
+
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.member-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.member-image {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  border-radius: 50%; /* Circular shape */
+}
+
+.view-details {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4c749e;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+  background-color: #0056b3;
+}
