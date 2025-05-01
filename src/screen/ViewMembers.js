@@ -1,27 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link to navigate to individual member's detail
+import { Link } from 'react-router-dom'; 
 import './ViewMembers.css';
 
 const ViewMembers = () => {
   const [members, setMembers] = useState([]);
-  const [error, setError] = useState(null); // For error handling
-
-  // Fetch all members from the backend
+  const [error, setError] = useState(null); 
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/members'); // Ensure correct URL
-        console.log('Fetched members:', response.data); // Log the response for debugging
-        setMembers(response.data); // Store fetched data in state
+        const response = await axios.get('http://localhost:5000/api/members'); 
+        console.log('Fetched members:', response.data); 
+        setMembers(response.data); 
       } catch (err) {
         console.error('Error fetching members:', err);
-        setError('Error fetching members'); // Set error message if API call fails
+        setError('Error fetching members'); 
       }
     };
 
     fetchMembers();
-  }, []); // Empty dependency array ensures this effect runs once when the component mounts
+  }, []); 
 
   return (
     <div className="members-container">
