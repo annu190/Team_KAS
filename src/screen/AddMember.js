@@ -33,7 +33,6 @@ const AddMember = () => {
     }
 
     try {
-      // Updated the URL to your backend API
       await axios.post('http://localhost:5000/api/members', data); // <-- update here
       alert('Member added successfully!');
     } catch (err) {
