@@ -7,6 +7,7 @@ Team Management Application
 Annu Mishra[RA2211056010073] Sahil Waghmare [RA2211056010120] Komal Verma[RA2211056010140]
 
 #Features
+
 Add new team members with profile images
 View all team members in a grid layout
 View detailed information about each team member
@@ -15,6 +16,7 @@ Image upload functionality
 RESTful API endpoints
 
 #Prerequisites
+
 Node.js (v14 or higher)
 MongoDB
 npm or yarn
@@ -34,6 +36,7 @@ mkdir uploads
 Start MongoDB service on your machine
 
 #Running the Application
+
 Start the backend server (from the root directory):
 npm run dev
 Start the frontend development server (from the client directory):
@@ -46,6 +49,7 @@ GET /api/members/:id - Get a specific team member
 POST /api/members - Add a new team member
 
 #echnologies Used
+
 #Frontend:
 React.js
 Material-UI
@@ -56,6 +60,7 @@ Node.js
 Express
 MongoDB
 Multer (for file uploads) 
+
 #Project Overview/ Outcome:
 ![Screenshot (231)](https://github.com/user-attachments/assets/94d38f67-0a66-4465-b895-9c720d29af0a)
 
