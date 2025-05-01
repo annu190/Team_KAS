@@ -4,12 +4,12 @@ import Home from './screen/Home';
 import AddMember from './screen/AddMember';
 import ViewMembers from './screen/ViewMembers';
 import MemberDetails from './screen/MemberDetails';
-import Navbar from './screen/Navbar'; // ✅ Import Navbar
+import Navbar from './screen/Navbar'; 
 
 const App = () => {
   return (
     <Router>
-      <Navbar /> {/* ✅ Navbar rendered globally above all routes */}
+      <Navbar /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddMember />} />
